@@ -1,9 +1,6 @@
 package one;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 public class UniquePairCounter extends PairCounter {
 
@@ -30,7 +27,6 @@ public class UniquePairCounter extends PairCounter {
             }
 
         }
-
         return count;
     }
 }

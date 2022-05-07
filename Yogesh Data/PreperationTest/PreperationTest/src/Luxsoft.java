@@ -13,6 +13,12 @@ public class Luxsoft {
 
         final CharacterCounter characterCounter = new MostFrequentCharacterCounter(message);
 
+        ArrayList<Number> list = new ArrayList<>();
+        list.add(1);
+        list.add(1.5f);
+        list.forEach(System.out::println);
+
+
 
         characterCounter.getCharacter().forEach((k,v) -> System.out.println(k + " = " + v) );
         System.out.println("^^^^^^^^^^^^^^^^^^^^^^66");
@@ -56,14 +62,14 @@ public class Luxsoft {
 //        System.err.println( filtered.get("x"));
         //System.err.println("tx: " + tx);
 
-        String[] arr = new String[]{"a", "b", "c"};
-        Stream<String> streamOfArrayFull = Arrays.stream(arr);
-        Stream<String> streamOfArrayPart = Arrays.stream(arr, 1, 3);
-        System.out.println(streamOfArrayPart.toString());
-
-        Random random = new Random();
-        DoubleStream doubleStream = random.doubles(3);
-        System.out.println(doubleStream.toString());
+//        String[] arr = new String[]{"a", "b", "c"};
+//        Stream<String> streamOfArrayFull = Arrays.stream(arr);
+//        Stream<String> streamOfArrayPart = Arrays.stream(arr, 1, 3);
+//        System.out.println(streamOfArrayPart.toString());
+//
+//        Random random = new Random();
+//        DoubleStream doubleStream = random.doubles(3);
+//        System.out.println(doubleStream.toString());
 
 
     }
