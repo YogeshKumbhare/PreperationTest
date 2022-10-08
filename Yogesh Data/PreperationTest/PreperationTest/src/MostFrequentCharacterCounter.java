@@ -44,6 +44,7 @@ public class MostFrequentCharacterCounter extends CharacterCounter {
         countMap = (HashMap<String, Long>) Arrays.stream(message.split(" "))
                 .collect(Collectors.groupingBy(Object::toString, Collectors.counting()));
         return countMap;
+
     }
 
 

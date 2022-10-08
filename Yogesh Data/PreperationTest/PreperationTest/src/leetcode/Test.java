@@ -10,7 +10,7 @@ public class Test {
 
         "new".equals(x);
         x.equals("new");
-        "new" == x
+        //"new" == x
 
     }
 }
