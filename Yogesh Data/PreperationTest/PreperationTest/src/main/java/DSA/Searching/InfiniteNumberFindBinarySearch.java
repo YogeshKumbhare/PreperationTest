@@ -2,22 +2,26 @@ package DSA.Searching;
 
 import java.util.Arrays;
 
-public class FindFirstAndLastOccurenceBinarySearch {
+public class InfiniteNumberFindBinarySearch {
     public static void main(String[] args) {
         int[] arr = {5, 7, 7, 8, 8, 9, 24};
-        int target = 8;
-        int[] ans = {-1, -1};
-        ans[0] = binarySearch(arr, target, true);
-        if (ans[0] != -1) {
-            ans[1] = binarySearch(arr, target, false);
-        }
-        System.out.println("main string args - " + Arrays.toString(ans));
+        int target = 24;
+       int ans =  searchArray(arr,target);
+        System.out.println("main string args - " +ans);
     }
 
+    static int searchArray(int arr[], int target){
+        int start= 0; int end = 1;
+        while(target > arr[end]){
+            int newStart = end+1;
+            end = end + (end - start + 1)* 2;
+            start = newStart;
+        }
+         return binarySearch(arr, target, start, end);
 
-    public static int binarySearch(int[] arr, int target, boolean firstOccurence) {
-        int start = 0;
-        int end = arr.length - 1;
+    }
+
+    public static int binarySearch(int[] arr, int target, int start, int end) {;
         int ans = -1;
         while (start <= end) {
             // find the middle element
@@ -30,13 +34,7 @@ public class FindFirstAndLastOccurenceBinarySearch {
                 start = mid + 1;
             } else {
                 // possible ans
-
-                ans = mid;
-                if (firstOccurence) {
-                    end = mid - 1;
-                } else {
-                    start = mid + 1;
-                }
+               return mid;
             }
         }
         return ans;

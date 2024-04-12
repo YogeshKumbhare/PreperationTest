@@ -3,8 +3,8 @@ package DSA.Searching;
 public class MaxWealth {
     public static void main(String[] args) {
         int[][] accounts = {
-                {23, 4, 1},
-                {18, 12, 3, 9}
+                {1, 4, 1},
+                {0, 0, 3, 0}
         };
         int a = maximumWealth( accounts);
         System.out.println(a);
