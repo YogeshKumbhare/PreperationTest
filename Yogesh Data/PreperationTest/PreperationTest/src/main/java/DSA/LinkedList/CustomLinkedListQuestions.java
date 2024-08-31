@@ -55,7 +55,6 @@ public class CustomLinkedListQuestions {
 
     // recursive called method
     private ListNode insertRecursive(int val, int index, ListNode listNode) {
-
         if (index == 0) {
             ListNode temp = new ListNode(val, listNode);
             size++;
@@ -200,7 +199,7 @@ public class CustomLinkedListQuestions {
 
     }
 
-    //fetch th emiddle of elemt of linked list
+    //fetch the middle of elemt of linked list
 
     public ListNode middleNode(ListNode n){
         ListNode slow = n;

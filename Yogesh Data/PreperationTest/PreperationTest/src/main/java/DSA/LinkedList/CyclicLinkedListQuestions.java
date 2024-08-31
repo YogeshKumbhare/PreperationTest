@@ -162,15 +162,16 @@ public class CyclicLinkedListQuestions {
         cyclicLinkedListQuestions.insert(5);
         cyclicLinkedListQuestions.insert(6);
         cyclicLinkedListQuestions.insert(7);
+        cyclicLinkedListQuestions.insert(7);
         cyclicLinkedListQuestions.insert(8);
 
 
         ListNode n = cyclicLinkedListQuestions.display();
-        cyclicLinkedListQuestions.hasCycle(n);
-        System.out.println("detect cycle :" + cyclicLinkedListQuestions.detectCycle(n).val);
+        //cyclicLinkedListQuestions.hasCycle(n);
+        //System.out.println("detect cycle :" + cyclicLinkedListQuestions.detectCycle(n).val);
         System.out.println("length of the  cycle :" + cyclicLinkedListQuestions.lengthCycle(n));
-        System.out.println(cyclicLinkedListQuestions.isHappy(19));
-        System.out.println(cyclicLinkedListQuestions.middleNode(n));
+        //System.out.println(cyclicLinkedListQuestions.isHappy(19));
+       // System.out.println(cyclicLinkedListQuestions.middleNode(n));
 
     }
 
