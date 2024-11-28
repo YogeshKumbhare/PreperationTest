@@ -9,8 +9,8 @@ public class BinarySerach2DArray {
                 {9, 10, 11, 12},
                 {13, 14, 15, 16}};
         int target = 16;
-        int ans[] = searchmatrix(arr, target);
-        System.out.println(Arrays.toString(ans));
+        int[] ans = searchmatrix(arr, target);
+        System.out.println(ans);
     }
 
 //simple binary program to search target elemnt in 2d array

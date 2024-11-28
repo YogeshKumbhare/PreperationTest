@@ -17,7 +17,7 @@ public class SearchIn2DArray {
         System.out.println(Arrays.toString(ans));
 
         System.out.println("Return max value " + max(arr));
-        System.out.println("Return get index of value " + Arrays.toString(search1(arr,56)));
+        System.out.println("Return get index of value " + Arrays.toString(search(arr,56)));
         System.out.println("Return get index of value " + digits2(-345678));
 
     }
@@ -51,14 +51,4 @@ public class SearchIn2DArray {
         return new int[]{-1, -1};
     }
 
-    private static int[] search1(int[][] arr, int target ) {
-        for (int row = 0; row < arr.length; row++) {
-            for (int col = 0; col < arr[row].length; col++) {
-                if (arr[row][col] == 56) {
-                    return new int[]{row, col};
-                }
-            }
-        }
-        return new int[]{-1, -1};
-    }
 }

@@ -12,6 +12,7 @@ public class FindDuplicateElementInList {
     private Node head;
     private Node tail;
     private int size;
+
     // insert element in the list
     public void insertElement(int value) {
         Node node = new Node(value);
@@ -52,7 +53,6 @@ public class FindDuplicateElementInList {
         }
         tail = node;
         tail.next = null;
-
 
     }
 

@@ -25,9 +25,21 @@ public class ReverseLinkedList {
         return prev;
     }
 
+    /*
+    Original Linked List:
+    1 2 3 4 5
+    Reversed Linked List:
+    5 4 3 2 1
+     */
     public static void printLinkedList(ListNode head) {
         ListNode current = head;
-        while (head != null) {
+
+        if(head == null) {
+            System.out.println("Linked list is empty");
+            return;
+        }
+
+        while (current != null) {
             System.out.print(current.val + " ");
             current = current.next;
         }
