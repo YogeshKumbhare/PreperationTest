@@ -5,8 +5,8 @@ import java.util.Queue;
 
 class Node {
     int value;
-    Node left;
-    Node right;
+    Node2 left;
+    Node2 right;
 
     Node(int value) {
         this.value = value;
@@ -20,49 +20,49 @@ public class BinaryTreeInsertion {
 
     }
 
-    public static Node insert(Node node, int key) {
+    public static Node2 insert(Node2 node1, int key) {
 
-        if (node == null) {
-            return new Node(key);
+        if (node1 == null) {
+            return new Node2(key);
         }
 // create queue level order traversing
-        Queue<Node> queue = new LinkedList<>();
+        Queue<Node2> queue = new LinkedList<>();
 
-        queue.add(node);
+        queue.add(node1);
         while (!queue.isEmpty()) {
-            Node curr = queue.poll();
+            Node2 curr = queue.poll();
             if (curr.left == null) {
-                curr.left = new Node(key);
+                curr.left = new Node2(key);
                 break;
             } else {
                 queue.add(curr.left);
             }
             if (curr.right == null) {
-                curr.right = new Node(key);
+                curr.right = new Node2(key);
                 break;
             } else {
                 queue.add(curr.right);
             }
         }
-        return node;
+        return node1;
     }
 
 
-    static void inorder(Node node) {
-        if (node == null) {
+    static void inorder(Node2 node1) {
+        if (node1 == null) {
             return;
         }
-        inorder(node.left);
-        System.out.print(node.value + " ");
-        inorder(node.right);
+        inorder(node1.left);
+        System.out.print(node1.data + " ");
+        inorder(node1.right);
     }
 
     public static void main(String[] args) {
-        Node node = new Node(2);
-        node.left = new Node(3);
-        node.right = new Node(4);
-        node.left.left = new Node(5);
-        node.left.right = new Node(6);
+        Node2 node1 = new Node2(2);
+        node1.left = new Node2(3);
+        node1.right = new Node2(4);
+        node1.left.left = new Node2(5);
+        node1.left.right = new Node2(6);
         // insertion binary tree
 //        System.out.print("Inorder traversal before insertion: ");
 //        inorder(node);
@@ -88,55 +88,55 @@ public class BinaryTreeInsertion {
 
         //deletion binary search tree
         System.out.print("Inorder traversal before deletion: ");
-        inorder(node);
+        inorder(node1);
         System.out.println();
 
         int key = 3;
-        node = delete(node, key);
+        node1 = delete(node1, key);
         System.out.print("Inorder traversal after deletion: ");
-        inorder(node);
+        inorder(node1);
         System.out.println();
 
 
     }
 
-    private static Node delete(Node node, int key) {
+    private static Node2 delete(Node2 node1, int key) {
 
-        Node lastNode = null;
-        Node lastParent = null;
+        Node2 lastNode1 = null;
+        Node2 lastParent = null;
 
-        if (node == null) {
+        if (node1 == null) {
             return null;
         }
 
         // Use a queue to perform BFS
-        Queue<Node> q = new LinkedList<>();
-        q.add(node);
-        Node target = null;
+        Queue<Node2> q = new LinkedList<>();
+        q.add(node1);
+        Node2 target = null;
 
         // Find the target node
         while (!q.isEmpty()) {
-            Node curr = q.poll();
+            Node2 curr = q.poll();
 
-            if (curr.value == key) {
+            if (curr.data == key) {
                 target = curr;
                 break;
             }
             if (curr.left != null) q.add(curr.left);
             if (curr.right != null) q.add(curr.right);
         }
-        if (target == null) return node;
+        if (target == null) return node1;
 
-        Queue<Node> queue = new LinkedList<>();
-        queue.add(node);
-        Queue<Node> parentQueue = new LinkedList<>();
+        Queue<Node2> queue = new LinkedList<>();
+        queue.add(node1);
+        Queue<Node2> parentQueue = new LinkedList<>();
         parentQueue.add(null);
 
 
         while (!queue.isEmpty()) {
-            Node curr = queue.poll();
-            Node parent = parentQueue.poll();
-            lastNode = curr;
+            Node2 curr = queue.poll();
+            Node2 parent = parentQueue.poll();
+            lastNode1 = curr;
             lastParent = parent;
 
             if (curr.left != null) {
@@ -150,17 +150,17 @@ public class BinaryTreeInsertion {
             }
 
             if (target == null) {
-                return node;
+                return node1;
             }
         }
 
-        target.value = lastNode.value;
+        target.data = lastNode1.data;
 
         // deletetion from teh binary list
 
         if (lastParent != null) {
 
-            if (lastParent.left == lastNode) {
+            if (lastParent.left == lastNode1) {
                 lastParent.left = null;
             } else {
                 lastParent.right = null;
@@ -169,17 +169,17 @@ public class BinaryTreeInsertion {
         } else {
             return null;
         }
-        return node;
+        return node1;
     }
 
-        private static boolean search (Node node,int key){
-            if (node == null) {
+        private static boolean search (Node2 node1, int key){
+            if (node1 == null) {
                 return false;
             }
-            if (node.value == key) {
+            if (node1.data == key) {
                 return true;
             }
-            return search(node.left, key) || search(node.right, key);
+            return search(node1.left, key) || search(node1.right, key);
         }
 
 

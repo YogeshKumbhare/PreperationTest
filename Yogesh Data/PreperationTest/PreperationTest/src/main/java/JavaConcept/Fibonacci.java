@@ -2,7 +2,7 @@ package JavaConcept;
 
 import java.util.Arrays;
 
-public sealed class Fibonacci extends Thread  {
+public class Fibonacci extends Thread  {
     public static void main(String[] args) {
 //        int n = 10; // Change this value to calculate Fibonacci sequence up to a different number
 //
