@@ -30,7 +30,6 @@ public class FindFirstAndLastOccurenceBinarySearch {
                 start = mid + 1;
             } else {
                 // possible ans
-
                 ans = mid;
                 if (firstOccurence) {
                     end = mid - 1;

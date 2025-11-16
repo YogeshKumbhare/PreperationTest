@@ -13,7 +13,7 @@ public class BinarySerach_bkp {
     }
 
     private static int extracted(int[] arr) {
-        int element = 2;
+        int element = 32;
 
         int low = 0, mid, high = arr.length - 1;
         while (low <= high) {
