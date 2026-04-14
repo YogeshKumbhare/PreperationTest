@@ -9,7 +9,13 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/IBMMq/pom.xml" />
+        <option value="$PROJECT_DIR$/../Java-A-TO-Z/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/IBMMq/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_22" project-jdk-name="22" project-jdk-type="JavaSDK" />

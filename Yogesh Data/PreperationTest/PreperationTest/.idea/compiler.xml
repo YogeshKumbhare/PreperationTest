@@ -6,13 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Java-A-TO-Z" />
         <module name="PreperationTest" />
-        <module name="IBMMq" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="abstract_factory.main" target="16" />
-      <module name="abstract_factory.test" target="16" />
+      <module name="abstract_factory.main" target="22" />
+      <module name="abstract_factory.test" target="22" />
+      <module name="IBMMq" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

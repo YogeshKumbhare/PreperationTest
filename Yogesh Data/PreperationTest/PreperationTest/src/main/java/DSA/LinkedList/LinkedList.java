@@ -1,5 +1,15 @@
 package DSA.LinkedList;
 
+class Node {
+    public int value;
+    public Node next;
+
+    Node(int value) {
+        this.value = value;
+    }
+
+}
+
 public class LinkedList {
 
     private Node head;
@@ -19,7 +29,7 @@ public class LinkedList {
     public void display(){
         Node node = head;
         while(node != null){
-            System.out.print(node.value + " <==> ");
+            System.out.print(node.value + " <--> ");
             node = node.next;
         }
     }
@@ -36,16 +46,3 @@ public class LinkedList {
 }
 
 
-class Node {
-    public int value;
-    public Node next;
-
-    Node(int value) {
-        this.value = value;
-    }
-
-    Node(int value, Node next) {
-        this.value = value;
-        this.next = next;
-    }
-}
