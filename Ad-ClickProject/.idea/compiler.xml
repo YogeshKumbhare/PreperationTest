@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ad-click-analyzer" target="25" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ad-click-analyzer" options="-proc:none" />
+      <module name="ad-click-api" options="-proc:none" />
+      <module name="ad-click-kafka-consumer" options="-proc:none" />
+      <module name="ad-click-kafka-producer" options="-proc:none" />
+      <module name="ad-click-olap" options="-proc:none" />
+      <module name="ad-click-placement" options="-proc:none" />
+      <module name="ad-click-query" options="-proc:none" />
+      <module name="ad-click-reconciliation" options="-proc:none" />
+      <module name="ad-click-redis" options="-proc:none" />
+      <module name="ad-click-redis-cache" options="-proc:none" />
+      <module name="ad-click-tracking" options="-proc:none" />
+    </option>
+  </component>
+</project>
